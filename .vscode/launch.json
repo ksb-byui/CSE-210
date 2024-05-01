@@ -4,13 +4,13 @@
     "configurations": [
 
         {
-            "name": "Sandbox Project",
+            "name": "DistributionBuilder Project",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-sandbox-Sandbox",
-            "program": "${workspaceFolder}/sandbox/Sandbox/bin/Debug/net8.0/Sandbox.dll",
+            "preLaunchTask": "build-sandbox-DistributionBuilder",
+            "program": "${workspaceFolder}/sandbox/DistributionBuilder/bin/Debug/net8.0/DistributionBuilder.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/sandbox/Sandbox",
+            "cwd": "${workspaceFolder}/sandbox/DistributionBuilder",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
