@@ -1,0 +1,12 @@
+[
+  {
+    "Prompt": "What was the strongest emotion I felt today?",
+    "Response": "I felt anxiety.",
+    "Date": "2024-05-19T19:36:14.322017-06:00"
+  },
+  {
+    "Prompt": "How did I see the hand of the Lord in my life today?",
+    "Response": "Sacrament meeting.",
+    "Date": "2024-05-19T19:36:32.4534343-06:00"
+  }
+]
