@@ -20,4 +20,25 @@ public class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
+
+    public ReflectionActivity() : base("Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
+    {
+    }
+
+    protected override void RunActivity()
+    {
+        Random random = new Random();
+        string prompt = Prompts[random.Next(Prompts.Length)];
+        Console.WriteLine(prompt);
+        Pause(5);
+
+        int elapsedTime = 0;
+        while (elapsedTime < Duration)
+        {
+            string question = Questions[random.Next(Questions.Length)];
+            Console.WriteLine(question);
+            Spinner(5);
+            elapsedTime += 5;
+        }
+    }
 }

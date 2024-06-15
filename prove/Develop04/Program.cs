@@ -2,6 +2,8 @@ using System;
 
 class Program
 {
+    static int completedActivities = 0;
+
     static void Main()
     {
         while (true)
@@ -12,6 +14,7 @@ class Program
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listing Activity");
             Console.WriteLine("4. Quit");
+            Console.WriteLine($"You have completed {completedActivities} activities.");
             Console.Write("Choose an activity: ");
             string choice = Console.ReadLine();
 
@@ -36,6 +39,7 @@ class Program
             }
 
             activity.Start();
+            completedActivities++;
         }
     }
 
