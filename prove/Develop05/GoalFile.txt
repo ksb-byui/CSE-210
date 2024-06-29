@@ -1,0 +1,4 @@
+SimpleGoal:Simple,2,True
+EternalGoal:Eternal,4
+ChecklistGoal:Checklist,6,2,100000,2,True
+Score:100018
