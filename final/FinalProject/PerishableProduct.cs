@@ -1,27 +1,28 @@
 using System;
 
-namespace SupermarketSimulation
+// Class representing a perishable product with an expiration date
+public class PerishableProduct : Product
 {
-    public class PerishableProduct : Product
+    private DateTime _expirationDate;  // Expiration date of the product
+
+    public DateTime ExpirationDate => _expirationDate;
+
+    // Constructor to initialize a perishable product
+    public PerishableProduct(int productID, decimal basePrice, decimal currentPrice, string name, int stock, DateTime expirationDate)
+        : base(productID, basePrice, currentPrice, name, stock)
     {
-        private DateTime _expirationDate;
+        _expirationDate = expirationDate;
+    }
 
-        public PerishableProduct(int productID, decimal basePrice, decimal currentPrice, string name, DateTime expirationDate)
-            : base(productID, basePrice, currentPrice, name)
-        {
-            _expirationDate = expirationDate;
-        }
+    // Checks if the product is expired based on the current date
+    public bool CheckExpiration(DateTime currentDate)
+    {
+        return currentDate > _expirationDate;
+    }
 
-        public bool CheckExpiration()
-        {
-            // Method implementation here
-            return false;
-        }
-
-        public new string GetProductDetails()
-        {
-            // Method implementation here
-            return string.Empty;
-        }
+    // Returns product details including expiration date
+    public new string GetProductDetails()
+    {
+        return base.GetProductDetails() + $", ExpirationDate: {_expirationDate.ToShortDateString()}";
     }
 }
